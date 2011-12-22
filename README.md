@@ -3,7 +3,7 @@
 Wine Over IP is a simple service allowing you to share your wine photos
 over twitter.
 
-Foodoveripis powered by Apache CouchDB and Python. All the frontend is a
+**Wine Over IP** is powered by Apache CouchDB and Python. All the frontend is a
 couchapp.
 
 
