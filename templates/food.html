@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Wine Over IP - {{doc._id}}</title>
+
+    <script src="{{root}}/static/html5.js"></script>
+    <link rel="stylesheet" href="{{root}}/static/main.css">
+
+
+
+</head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a href="{{root}}/" class="brand">Wine Over IP</a>
+          <ul class="secondary-nav">
+            <li><a href="{{root}}/random">» go random</a></li>
+            <li><a href="{{root}}/about">about</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="content">
+        <div class="row">
+          <div class="span12">
+            <div class="row">
+              <div class="span2">
+                <a href="http://twitter.com/#!/{{doc.from_user}}"><img class="thumbnail avatar" src="{{profile_uri}}"></a>
+              </div>
+              <div class="span10">
+                <p><a href="http://twitter.com/#!{{doc.from_user}}"
+                  class="screen-name">@{{doc.from_user}}</a><br>
+                 @{{doc.from_user_name}}</p>
+              </div>
+            </div>
+
+            <blockquote><p class="tweet-text">{{{ doc.txt }}}</p></blockquote>
+           </div>
+        </div>
+            
+        <div class="description row">
+
+            <div id="photo">
+              <img class="thumbnail" src="{{{photo_uri}}}" alt="{{doc.txt}}">
+            </div>
+
+            
+        </div>
+
+          <div class="row">
+              <p><a href="{{uri}}" class="food-link">A link to this
+                "wine"</a></p>
+          </div>
+
+
+        {{#is_location}}
+            <div class="row">
+              
+              <div id="span6">
+                <img src="http://maps.googleapis.com/maps/api/staticmap?center={{coords.lon}},{{coords.lat}}&zoom=11&size=200x100&scale=1&sensor=false">
+              </div>
+              <div id="span6">
+                <img src="http://maps.googleapis.com/maps/api/streetview?size=200x100&location={{coords.lon}},{{loc.lat}}&heading=235&sensor=false">
+              </div>
+            </div>
+        {{/is_location}}
+
+      <footer>
+        <p>Powered by <a href="http://couchdb.apache.org">Apache
+          CouchDB</a> - Code available on <a
+          href="https://github.com/benoitc/foodoverip">github</a></p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

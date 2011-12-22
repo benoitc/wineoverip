@@ -1,0 +1,59 @@
+[
+    {
+        "from": "",
+        "to": "index.html"
+    },
+    {
+        "from": "/",
+        "to": "index.html"
+    },
+
+    {
+        "from": "/about",
+        "to": "about.html"
+    },
+
+    {
+        "from": "/foods",
+        "to": "_view/food"
+    },
+
+    {
+        "from": "/photo/:id",
+        "to": "../../:id/photo.png"
+    },
+
+    {
+        "from": "/avatar/:id",
+        "to": "../../:id/profile.png"
+    },
+
+
+    {
+        "from": "/random",
+        "to": "_random/random",
+        "query": {
+            "filter": "_view",
+            "view": "foodoverip/food"
+        }
+    },
+    {
+        "from": "/_changes",
+        "to": "../../_changes"
+    },
+    {
+        "from": "/_changes/*",
+        "to": "../../_changes/*"
+    },
+
+
+    {
+        "from": "/static/*",
+        "to": "*"
+    },
+
+    {
+        "from": "/*",
+        "to": "_show/random/*"
+    }
+]
