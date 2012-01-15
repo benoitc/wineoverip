@@ -15,7 +15,7 @@ couchapp.
 - [couch_randomdoc](http://github.com/refuge/couch_randomdoc) extention
   to handle random document fetching in couchdb. It's already included
 in rcouch.
-- [Python 2.7](http://python.orh)
+- [Python 2.7](http://python.org)
 - [Couchdbkit](http://couchdbkit.org)
 - [Gevent](http://gevent.org)
 - [Erica](http://github.com/benoitc/erica)
@@ -26,21 +26,21 @@ in rcouch.
 1. Install rcouch and launch it.
 2. push the couchapp to your rcouch
 
-    $ cd couchapp/foodoverip
-    $ erica push http://rcouch/foodoverip
+    $ cd couchapp/wineoverip
+    $ erica push http://rcouch/wineoverip
 
 
 3. Get the grabber from the source code of
-   [foodoverip](http://github.com/benoitc/foodoverip) and install it
+   [wineoverip](http://github.com/benoitc/wineoverip) and install it
 
-3. Launch the food grabber
+3. Launch the wine grabber
 
-    $ go_grab_food -c ~/.wineoverip.ini 
+    $ go_grab_wine -c ~/.wineoverip.ini 
 
 ex of ini:
 
-    [foodoverip]
+    [wineoverip]
     server_uri = http://127.0.0.1:5984 ; uri of couchdb node
-    db = foodoverip ; db where to save data
-    q = #foodoverip ; query to do in twitter
+    db = wineoverip ; db where to save data
+    q = #wineoverip ; query to do in twitter
     refresh_tim = 10 ; in seconds
